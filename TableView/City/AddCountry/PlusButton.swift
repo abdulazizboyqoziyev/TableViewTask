@@ -7,23 +7,23 @@
 
 import UIKit
 
-class PlusButton: UIViewController {
+protocol CountryType {
+    var Countryname: String { get set }
+    var CountryInformation: String { get set }
+    var Country: String { get set }
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+protocol CountrySaveDelegate: AnyObject {
+    func save(country: CountryType)
+}
 
-        // Do any additional setup after loading the view.
-    }
+struct Country: CountryType {
+    var Countryname: String
+    var CountryInformation: String
+    var Country: String
+}
+
+final class PlusButton: UIView {
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+//    lazy var 
 }

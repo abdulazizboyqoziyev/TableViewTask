@@ -9,13 +9,22 @@
 /* Begin PBXBuildFile section */
 		8919AE0F29B8942B00BEAC8D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE0E29B8942B00BEAC8D /* AppDelegate.swift */; };
 		8919AE1129B8942B00BEAC8D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE1029B8942B00BEAC8D /* SceneDelegate.swift */; };
-		8919AE1329B8942B00BEAC8D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE1229B8942B00BEAC8D /* ViewController.swift */; };
 		8919AE1629B8942B00BEAC8D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8919AE1429B8942B00BEAC8D /* Main.storyboard */; };
 		8919AE1829B8942B00BEAC8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8919AE1729B8942B00BEAC8D /* Assets.xcassets */; };
 		8919AE1B29B8942B00BEAC8D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8919AE1929B8942B00BEAC8D /* LaunchScreen.storyboard */; };
 		8919AE2629B8942B00BEAC8D /* TableViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE2529B8942B00BEAC8D /* TableViewTests.swift */; };
 		8919AE3029B8942C00BEAC8D /* TableViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE2F29B8942C00BEAC8D /* TableViewUITests.swift */; };
 		8919AE3229B8942C00BEAC8D /* TableViewUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE3129B8942C00BEAC8D /* TableViewUITestsLaunchTests.swift */; };
+		8919AE4029B8944F00BEAC8D /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8919AE3F29B8944F00BEAC8D /* SnapKit */; };
+		8919AE4429B8948500BEAC8D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE4229B8948500BEAC8D /* DetailViewModel.swift */; };
+		8919AE4529B8948500BEAC8D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE4329B8948500BEAC8D /* DetailViewController.swift */; };
+		8919AE4A29B894B800BEAC8D /* CityListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE4729B894B700BEAC8D /* CityListViewController.swift */; };
+		8919AE4B29B894B800BEAC8D /* CityListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE4829B894B700BEAC8D /* CityListViewModel.swift */; };
+		8919AE4C29B894B800BEAC8D /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8919AE4929B894B700BEAC8D /* City.swift */; };
+		896FC2D929C202F300CC363A /* PlusButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FC2D829C202F300CC363A /* PlusButtonViewModel.swift */; };
+		896FC2DC29C2031800CC363A /* PlusButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FC2DB29C2031800CC363A /* PlusButtonViewController.swift */; };
+		896FC2DE29C2045400CC363A /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FC2DD29C2045400CC363A /* AppTextField.swift */; };
+		896FC2E029C206B900CC363A /* PlusButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 896FC2DF29C206B900CC363A /* PlusButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +48,6 @@
 		8919AE0B29B8942B00BEAC8D /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8919AE0E29B8942B00BEAC8D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8919AE1029B8942B00BEAC8D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8919AE1229B8942B00BEAC8D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8919AE1529B8942B00BEAC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8919AE1729B8942B00BEAC8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8919AE1A29B8942B00BEAC8D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +57,15 @@
 		8919AE2B29B8942C00BEAC8D /* TableViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8919AE2F29B8942C00BEAC8D /* TableViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITests.swift; sourceTree = "<group>"; };
 		8919AE3129B8942C00BEAC8D /* TableViewUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8919AE4229B8948500BEAC8D /* DetailViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		8919AE4329B8948500BEAC8D /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8919AE4729B894B700BEAC8D /* CityListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListViewController.swift; sourceTree = "<group>"; };
+		8919AE4829B894B700BEAC8D /* CityListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityListViewModel.swift; sourceTree = "<group>"; };
+		8919AE4929B894B700BEAC8D /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		896FC2D829C202F300CC363A /* PlusButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonViewModel.swift; sourceTree = "<group>"; };
+		896FC2DB29C2031800CC363A /* PlusButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButtonViewController.swift; sourceTree = "<group>"; };
+		896FC2DD29C2045400CC363A /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		896FC2DF29C206B900CC363A /* PlusButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8919AE4029B8944F00BEAC8D /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +117,9 @@
 		8919AE0D29B8942B00BEAC8D /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				8919AE0E29B8942B00BEAC8D /* AppDelegate.swift */,
-				8919AE1029B8942B00BEAC8D /* SceneDelegate.swift */,
-				8919AE1229B8942B00BEAC8D /* ViewController.swift */,
+				896FC2DD29C2045400CC363A /* AppTextField.swift */,
+				8919AE4629B894A800BEAC8D /* City */,
+				8919AE4129B8946000BEAC8D /* mvm */,
 				8919AE1429B8942B00BEAC8D /* Main.storyboard */,
 				8919AE1729B8942B00BEAC8D /* Assets.xcassets */,
 				8919AE1929B8942B00BEAC8D /* LaunchScreen.storyboard */,
@@ -127,6 +145,38 @@
 			path = TableViewUITests;
 			sourceTree = "<group>";
 		};
+		8919AE4129B8946000BEAC8D /* mvm */ = {
+			isa = PBXGroup;
+			children = (
+				8919AE4329B8948500BEAC8D /* DetailViewController.swift */,
+				8919AE4229B8948500BEAC8D /* DetailViewModel.swift */,
+				8919AE1029B8942B00BEAC8D /* SceneDelegate.swift */,
+			);
+			path = mvm;
+			sourceTree = "<group>";
+		};
+		8919AE4629B894A800BEAC8D /* City */ = {
+			isa = PBXGroup;
+			children = (
+				8919AE0E29B8942B00BEAC8D /* AppDelegate.swift */,
+				8919AE4929B894B700BEAC8D /* City.swift */,
+				8919AE4729B894B700BEAC8D /* CityListViewController.swift */,
+				8919AE4829B894B700BEAC8D /* CityListViewModel.swift */,
+				896FC2DA29C202F700CC363A /* AddCountry */,
+			);
+			path = City;
+			sourceTree = "<group>";
+		};
+		896FC2DA29C202F700CC363A /* AddCountry */ = {
+			isa = PBXGroup;
+			children = (
+				896FC2D829C202F300CC363A /* PlusButtonViewModel.swift */,
+				896FC2DB29C2031800CC363A /* PlusButtonViewController.swift */,
+				896FC2DF29C206B900CC363A /* PlusButton.swift */,
+			);
+			path = AddCountry;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +193,9 @@
 			dependencies = (
 			);
 			name = TableView;
+			packageProductDependencies = (
+				8919AE3F29B8944F00BEAC8D /* SnapKit */,
+			);
 			productName = TableView;
 			productReference = 8919AE0B29B8942B00BEAC8D /* TableView.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +268,9 @@
 				Base,
 			);
 			mainGroup = 8919AE0229B8942B00BEAC8D;
+			packageReferences = (
+				8919AE3E29B8944F00BEAC8D /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 8919AE0C29B8942B00BEAC8D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,9 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8919AE1329B8942B00BEAC8D /* ViewController.swift in Sources */,
+				896FC2E029C206B900CC363A /* PlusButton.swift in Sources */,
+				896FC2DC29C2031800CC363A /* PlusButtonViewController.swift in Sources */,
+				896FC2D929C202F300CC363A /* PlusButtonViewModel.swift in Sources */,
 				8919AE0F29B8942B00BEAC8D /* AppDelegate.swift in Sources */,
+				8919AE4529B8948500BEAC8D /* DetailViewController.swift in Sources */,
 				8919AE1129B8942B00BEAC8D /* SceneDelegate.swift in Sources */,
+				8919AE4B29B894B800BEAC8D /* CityListViewModel.swift in Sources */,
+				8919AE4A29B894B800BEAC8D /* CityListViewController.swift in Sources */,
+				8919AE4429B8948500BEAC8D /* DetailViewModel.swift in Sources */,
+				8919AE4C29B894B800BEAC8D /* City.swift in Sources */,
+				896FC2DE29C2045400CC363A /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +666,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8919AE3E29B8944F00BEAC8D /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8919AE3F29B8944F00BEAC8D /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8919AE3E29B8944F00BEAC8D /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8919AE0329B8942B00BEAC8D /* Project object */;
 }

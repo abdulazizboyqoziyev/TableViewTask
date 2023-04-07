@@ -1,3 +1,4 @@
+
 //
 //  CityListViewController.swift
 //  TableViewTasks
@@ -8,10 +9,13 @@
 import Foundation
 import UIKit
 
+open class ViewModel: NSObject {
+    
+}
 final class CityListViewController: UIViewController {
     
     private var viewModel: CityListViewModel
-    
+    private let addInfo = UIButton()
     private lazy var tableView: UITableView = {
         let table = UITableView(frame: view.bounds, style: .insetGrouped)
         table.delegate = self
@@ -31,21 +35,33 @@ final class CityListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubView()
+        view.addSubview(tableView)
+        view.addSubview(addInfo)
+        view.addSubview(tableView)
         makeConstraints()
+        addInfo.setTitle("+", for: .normal)
+        addInfo.setTitleColor(UIColor.black, for: .normal)
+        addInfo.addTarget(self, action: #selector(showDetail), for: .touchUpInside)
         
     }
     
-    private func addSubView() {
-        view.addSubview(tableView)
-    }
+
     
     private func makeConstraints() {
         tableView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
         }
+        addInfo.snp.makeConstraints { make in
+            make.leading.equalTo(250)
+            make.trailing.equalTo(-50)
+            make.top.equalTo(50)
+        }
     }
     
+    @objc private func showDetail() {
+        viewModel.showContactDetail(at: 0)
+        
+    }
 }
 
 extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
@@ -66,3 +82,6 @@ extension CityListViewController: UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
+
+
+

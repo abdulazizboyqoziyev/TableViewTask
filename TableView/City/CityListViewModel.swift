@@ -7,14 +7,49 @@
 
 import Foundation
 
-class CityListViewModel {
+struct CityViewModelActions {
+    let showAddContact: () -> Void // bunda return qiymat boimaydi
+    let showConfirmDeleteAlert: () -> Void
+    let showContactDetail: (_ contact: Int) -> Void // _ bunda qoshilib ketmaydi
+}
+
+protocol CityViewModelInput {
+    func addContactTxapped()
+    func deleteContactTapped()
+    func contactDeletionConfirmed()
+    func showContactDetail(at index: Int)
+}
+
+protocol CityViewModelOutput {
+    
+}
+protocol CityViewModel: CityViewModelInput, CityViewModelOutput { }
+final class CityListViewModel: ViewModel, CityViewModelOutput {
+    
     private var cities: [City] = []
-     
-    init() {
+    
+    func data() {
         populateDataSource()
     }
+  
     
-    func populateDataSource() {
+    let actions: CityViewModelActions
+    init(actions: CityViewModelActions) {
+        self.actions = actions
+    }
+    func addContactTapped() {
+        actions.showAddContact()
+        
+    }
+    func showContactDetail(at index: Int) {
+        actions.showContactDetail(index) 
+        
+    }
+   
+    
+        
+
+    func  populateDataSource() {
         
         let tashkent = City(name: "Tashkent", info: "During its long history, Tashkent has had various changes in names and political and religious affiliations. Abu Rayhan Biruni wrote that the city's name Tashkent comes from the Turkic tash and kent, literally translated as \"Stone City\" or \"City of Stones\".[5] Ilya Gershevitch (1974:55, 72) (apud Livshits, 2007:179) traces the city's old name Chach back to Old Iranian *čāiča- \"area of water, lake\" (cf. Lake Čaēčista mentioned in the Avesta) (whence Middle Chinese transcription *źiäk > standard Chinese Shí with Chinese character 石 for \"stone\"[6][7]), and *Čačkand ~ Čačkanθ was the basis for Turkic adaption Tashkent, popularly etymologized as \"stone city\".", image: "Image")
         let samarqand = City(name: "Samarqand", info: "Samarkand, Uzbek Samarqand, city in east-central Uzbekistan that is one of the oldest cities of Central Asia. Known as Maracanda in the 4th century BCE, it was the capital of Sogdiana and was captured by Alexander the Great in 329 BCE. The city was later ruled by Central Asian Turks (6th century CE), the Arabs (8th century), the Samanids of Iran (9th–10th century), and various Turkic peoples (11th–13th century) before it was annexed by the Khwārezm-", image:  "Samarqand")
@@ -50,8 +85,4 @@ class CityListViewModel {
         return cities[indexPath.row]
     }
 }
-
-// hello world bila r''noeb bilan bantsan mazami hamsi yaxshimi
-// hullas hammsi yaxshi boladi bu dunyoda hech  qachon siqilma \
-// chubnki man borkane hamsi yaxshi boladi hammasi yaxxshi bolsagandan keyin manin iesla va sen oynaga qarab mene buinni uddalamadim degibn until a win si hbcdbcue hammais yaxsu bolqdi siqilman qizin tashlab ketdimi ketsa keyaversin dostlarin sotib ketdilami amay lu keta verin eng muhiumi omg oldinda tursin
 

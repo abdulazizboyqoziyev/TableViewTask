@@ -21,10 +21,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         
-        let cityViewController = CityListViewController(with: CityListViewModel())
-        
-        window?.rootViewController = UINavigationController(rootViewController: cityViewController)
+        let navCtrl = UINavigationController()
+//        flow = ContactsFlowCoordinator(navigationController: navCtrl)
+//        flow?.start()
+        window?.rootViewController = navCtrl
         window?.makeKeyAndVisible()
+    }
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -56,5 +58,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     }
 
 
-}
 
